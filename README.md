@@ -1,26 +1,26 @@
 # rpg_game
-### 게임 시스템 설명
+## 게임 시스템 설명
 
-## 캐릭터
+### 캐릭터
 - 속성: 이름, 체력, 공격력, 방어력
 - 행동: 공격, 방어, 상태 확인
 
 
-## 몬스터
+### 몬스터
 - 속성: 이름, 체력, 공격력(랜덤)
 - 행동: 공격, 상태 확인
 
 
 
-### 📝 저장 시스템
+## 📝 저장 시스템
 - 게임 종료 시 결과 저장 가능
 - 저장 정보: 캐릭터 이름, 남은 체력, 게임 결과
 
 
 
-### 📁 프로젝트 구조 및 설계
+## 📁 프로젝트 구조 및 설계
 
-## 클래스 구조
+### 클래스 구조
 ```
 project/
 ├── lib/
@@ -36,9 +36,9 @@ project/
 ```
 
 
-### 📌 주요 클래스 설명
+## 📌 주요 클래스 설명
 
-## 1. Character 클래스
+### 1. Character 클래스
 
 class Character {
   String name;// 캐릭터 이름
@@ -52,7 +52,7 @@ class Character {
   - 상태 확인 (showStatus)
 }
 
-## 2. Monster 클래스
+### 2. Monster 클래스
 
 class Monster {
   String name;// 몬스터 이름
@@ -64,7 +64,7 @@ class Monster {
   - 상태 확인 (showStatus)
 }
 
-## 3. Game 클래스
+### 3. Game 클래스
 class Game {
   Character character;// 플레이어 캐릭터
   List<Monster> monsters;// 몬스터 목록
@@ -79,24 +79,24 @@ class Game {
 }
 
 
-### 💾 데이터 파일 구조
+## 💾 데이터 파일 구조
 
-## characters.txt
+### characters.txt
 체력,공격력,방어력
 100,20,10
 
-## monsters.txt
+### monsters.txt
 이름,체력,최대공격력
 슬라임,50,15
 고블린,70,20
 드래곤,200,45
 
-## result.txt
+### result.txt
 캐릭터이름,남은체력,게임결과(승리/패배)
 용사,80,승리
 
 
-### 🔄 주요 프로세스 흐름
+## 🔄 주요 프로세스 흐름
 1. main.dart에서 Game 인스턴스 생성
 2. 게임 시작 전 파일에서 데이터 로드
 3. 캐릭터 이름 입력 받아 게임 시작
